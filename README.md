@@ -30,6 +30,16 @@
 - update the store with trailer video data
 - embeded the youtube video and make it autoplay and mute
 - added tailwind classed to make main container similar to netflix
+- build secondary component
+- Build movie cart
+- Build movie list
+- TMDB img CDN URL
+- Made the browse page look amazing using tailwind
+- use custom hooks to fetch the popular, top rated and upcoming movies
+
+# GPT Search feature
+
+-
 
 # Features
 

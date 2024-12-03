@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from '../utils/userSlice';
-import { LOGO } from "../utils/constants"
+import { toggleGptSearchView } from '../utils/gptSlice';
+import { LOGO, SUPOORTED_LANGUAGES } from "../utils/constants"
 
 const Header = () => {
     const navigate = useNavigate();
@@ -36,13 +37,25 @@ const Header = () => {
         return () => unsubscribe();
     }, [dispatch]);
 
+    const handleGptSearchClick = () => {
+        dispatch(toggleGptSearchView());
+    }
+
+    const handleLanguageChange = (e) => {
+
+    }
+
     return (
         <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between items-center">
             <img alt='logo' className="w-52" src={LOGO} />
 
             {user &&
-                <div className="flex">
-                    <img src={user?.photoURL} alt="user profile" className='w-12 rounded-md mr-4' />
+                <div className="flex gap-4">
+                    <select className='bg-black text-white' onChange={handleLanguageChange}>
+                        {SUPOORTED_LANGUAGES.map((lang) => <option kay={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
+                    </select>
+                    <button className="bg-purple-600 text-white py-2 px-4 rounded-md" onClick={handleGptSearchClick}>GPT Search</button>
+                    <img src={user?.photoURL} alt="user profile" className='w-12 rounded-md' />
                     <button className="bg-red-700 px-6 py-2 rounded-md text-white" onClick={handleSignOut}>Sign Out</button>
                 </div>
             }

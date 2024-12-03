@@ -5,7 +5,7 @@ import { auth } from "../utils/firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { USER_AVATAR } from '../utils/constants';
+import { BG_IMG, USER_AVATAR } from '../utils/constants';
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -24,7 +24,6 @@ const Login = () => {
         // Validate the form data
         const message = checkValidData(email.current.value, password.current.value);
         setErrorMessage(message);
-        console.log(message);
         if (message) return;
 
         if (!isSignInForm) {
@@ -68,7 +67,7 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/81d64f3c-9627-4741-8f74-422bf35f9f1d/web/IN-en-20241104-TRIFECTA-perspective_55263ea2-af7f-40ed-9cf0-7029a9b9baf4_small.jpg" alt="background" />
+                <img src={BG_IMG} alt="background" />
             </div>
             <div className="max-w-[450px] absolute bg-black bg-opacity-80 w-3/12 mx-auto left-0 right-0 text-white py-20 px-12 mt-36 rounded-md">
                 <form className="gap-8 flex-row grid" onSubmit={(e) => e.preventDefault()}>

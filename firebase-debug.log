@@ -1,0 +1,76 @@
+[debug] [2024-12-03T07:26:08.908Z] ----------------------------------------------------------------------
+[debug] [2024-12-03T07:26:08.909Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-12-03T07:26:08.909Z] CLI Version:   13.24.2
+[debug] [2024-12-03T07:26:08.909Z] Platform:      darwin
+[debug] [2024-12-03T07:26:08.909Z] Node Version:  v18.12.0
+[debug] [2024-12-03T07:26:08.910Z] Time:          Tue Dec 03 2024 12:56:08 GMT+0530 (India Standard Time)
+[debug] [2024-12-03T07:26:08.910Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-03T07:26:08.911Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-12-03T07:26:08.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-03T07:26:08.962Z] > authorizing via signed-in user (radhakavade@gmail.com)
+[debug] [2024-12-03T07:26:08.962Z] [iam] checking project netflixgpt-fab2e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-03T07:26:08.962Z] Checked if tokens are valid: false, expires at: 1731552066510
+[debug] [2024-12-03T07:26:08.962Z] Checked if tokens are valid: false, expires at: 1731552066510
+[debug] [2024-12-03T07:26:08.962Z] > refreshing access token with scopes: []
+[debug] [2024-12-03T07:26:08.963Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-03T07:26:08.963Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-03T07:26:09.299Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-03T07:26:09.300Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-03T07:26:09.315Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-fab2e:testIamPermissions [none]
+[debug] [2024-12-03T07:26:09.315Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-fab2e:testIamPermissions x-goog-quota-user=projects/netflixgpt-fab2e
+[debug] [2024-12-03T07:26:09.315Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-fab2e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-03T07:26:09.665Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-12-03T07:26:09.665Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-12-03T07:26:11.181Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-fab2e:testIamPermissions 200
+[debug] [2024-12-03T07:26:11.182Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-fab2e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-03T07:26:11.183Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:11.183Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:11.184Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-fab2e [none]
+[debug] [2024-12-03T07:26:11.906Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-fab2e 200
+[debug] [2024-12-03T07:26:11.906Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-fab2e {"projectId":"netflixgpt-fab2e","projectNumber":"735284051141","displayName":"netflixGPT","name":"projects/netflixgpt-fab2e","resources":{"hostingSite":"netflixgpt-fab2e"},"state":"ACTIVE","etag":"1_08da0d0d-a8f9-47db-beb7-4ba965083e98"}
+[info] 
+[info] === Deploying to 'netflixgpt-fab2e'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-12-03T07:26:11.914Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:11.914Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:11.914Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions [none]
+[debug] [2024-12-03T07:26:11.914Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-12-03T07:26:13.634Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions 200
+[debug] [2024-12-03T07:26:13.635Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions {"name":"projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[netflixgpt-fab2e]: beginning deploy... 
+[info] i  hosting[netflixgpt-fab2e]: found 14 files in build 
+[debug] [2024-12-03T07:26:13.653Z] [hosting] uploading with 200 concurrency
+[debug] [2024-12-03T07:26:13.658Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:13.659Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:13.659Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2024-12-03T07:26:13.660Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":4}
+[debug] [2024-12-03T07:26:13.660Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa:populateFiles [none]
+[debug] [2024-12-03T07:26:13.660Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa:populateFiles {"files":{"/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/index.html":"57e1f3d16b4613d671b8d6372640e677ab39f91ca3a79625af7a8da9423e8523","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/asset-manifest.json":"b3737358b3a8414a46b594221fe520d4b679944856b757b4cc2584034e01fcae","/static/js/main.46393e96.js.map":"19d2e6219d2a02c4663ca12494ca4406d17b69d53523fb19c14dca4faef6da27","/static/js/main.46393e96.js.LICENSE.txt":"595da5e4f088eb9a017e3b2a9fe147154d04dab0f44734a67ee207f93c084b8f","/static/js/main.46393e96.js":"fa3d65d53dabd4e1e3559ef4da255a034daa10dff81bf35d0dc3b011cbed2624","/static/js/453.67699da7.chunk.js.map":"b7b818d59227bcb3b30c281a4af0d2893b4148e7f840e6b818f0591fc417e5f2","/static/js/453.67699da7.chunk.js":"6fa725eabb8b3b5410a07980cfe01b07bbc371861f4845aaf0c3daefed02912d","/static/css/main.a0bb6344.css.map":"a6855d38a74200cd3ec10f9efe93fb5ef0b56e831a2a6d8c7b2323ac93bc5a3f","/static/css/main.a0bb6344.css":"f71a22f64f2f012ad9a90ef799844f9a7cb17e3d0601577945da7db45570eef9"}}
+[debug] [2024-12-03T07:26:14.968Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa:populateFiles 200
+[debug] [2024-12-03T07:26:14.968Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/netflixgpt-fab2e/versions/13054649e64cdcfa/files"}
+[debug] [2024-12-03T07:26:14.968Z] [hosting][populate queue][FINAL] {"max":1310,"min":1310,"avg":1310,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1310}
+[debug] [2024-12-03T07:26:14.968Z] [hosting] uploads queued: 0
+[debug] [2024-12-03T07:26:14.969Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1733210774969}
+[info] ✔  hosting[netflixgpt-fab2e]: file upload complete 
+[debug] [2024-12-03T07:26:14.969Z] [hosting] deploy completed after 1331ms
+[debug] [2024-12-03T07:26:14.970Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "netflixgpt-fab2e"
+    },
+    "version": "projects/735284051141/sites/netflixgpt-fab2e/versions/13054649e64cdcfa"
+  }
+]
+[info] i  hosting[netflixgpt-fab2e]: finalizing version... 
+[debug] [2024-12-03T07:26:14.971Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:14.971Z] Checked if tokens are valid: true, expires at: 1733214368300
+[debug] [2024-12-03T07:26:14.972Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions/13054649e64cdcfa updateMask=status%2Cconfig
+[debug] [2024-12-03T07:26:14.972Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixgpt-fab2e/versions/13054649e64cdcfa {"status":"FINALIZED","config":{}}
