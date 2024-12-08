@@ -19,5 +19,3 @@ export const SUPOORTED_LANGUAGES = [
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" }
 ]
-
-export const OPENAI_KEY = "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"
