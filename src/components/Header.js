@@ -54,7 +54,7 @@ const Header = () => {
             {user &&
                 <div className="flex gap-4">
                     {showGptSearch &&
-                        <select className='bg-black text-white' onChange={handleLanguageChange}>
+                        <select className='bg-gray-900 m-1 text-white px-3 py-2' onChange={handleLanguageChange}>
                             {SUPOORTED_LANGUAGES.map((lang) => <option kay={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
                         </select>
                     }
