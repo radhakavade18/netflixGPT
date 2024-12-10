@@ -21,5 +21,3 @@ export const SUPOORTED_LANGUAGES = [
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" }
 ]
-
-// export const OPENAI_KEY = "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"
