@@ -15,28 +15,20 @@ const Browse = () => {
     useTopRatedMovies();
     useUpcomingMovies();
 
-    const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
+    const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+    const showMovieDetails = useSelector((store) => store.movies.movieDetail);
 
     return (
         <div>
             <Header />
-            {showGptSearch ? <GptSearch /> :
+            {showGptSearch ? (
+                <GptSearch />
+            ) : (
                 <>
                     <MainContainer />
                     <SecondaryContainer />
                 </>
-            }
-
-
-            {/*
-                - Main Container
-                    - Video background
-                    - Video title
-                - SecondaryContainer
-                    - MoviesList * n
-                        - cards * n
-            */}
-
+            )}
         </div>
     )
 }

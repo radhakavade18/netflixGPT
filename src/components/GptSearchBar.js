@@ -11,10 +11,15 @@ const GptSearchBar = () => {
         // make an api call to  GPT API and get movie results
         const gptQuery = "Act as a movie recommendation system and suggest some movies for the query " + searchText.current.value + ". only give me 5 movies, comma seperated like the example result given ahead. Example Result: Don, Gadar, Koi mil gya, Golmal, Sholey";
 
-        const getResult = await openai.chat.completions.create({
-            messages: [{ role: 'user', content: gptQuery }],
-            model: 'gpt-3.5-turbo',
+        const gptResult = await openai.chat.completions.create({
+            // messages: [{ role: 'user', content: gptQuery }],
+            prompt: gptQuery,
+            model: "gpt-3.5-turbo",
+            temperature: 0.5,
+            max_tokens: 100,
         });
+
+        console.log(gptResult.choices);
     }
 
     return (

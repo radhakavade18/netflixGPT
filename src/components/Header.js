@@ -22,7 +22,7 @@ const Header = () => {
             navigate("/error")
         });
     }
-
+    const movieDetail = useSelector((store) => store.movies.movieDetail);
     // onAuthStateChanged call everytime header is rendered, and what it does is, its a callback for auth, everytime login, signup or sigout api calls from firebase this method gets callled automatically and route accordingly
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -52,10 +52,10 @@ const Header = () => {
             <img alt='logo' className="w-52" src={LOGO} />
 
             {user &&
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
                     {showGptSearch &&
                         <select className='bg-gray-900 m-1 text-white px-3 py-2' onChange={handleLanguageChange}>
-                            {SUPOORTED_LANGUAGES.map((lang) => <option kay={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
+                            {SUPOORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
                         </select>
                     }
                     <button className="bg-purple-600 text-white py-2 px-4 rounded-md" onClick={handleGptSearchClick}>

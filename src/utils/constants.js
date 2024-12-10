@@ -14,8 +14,12 @@ export const API_OPTIONS = {
 
 export const TMDB_IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
+export const TMDB_BG_CDN_URL = "https://image.tmdb.org/t/p/original";
+
 export const SUPOORTED_LANGUAGES = [
     { identifier: "en", name: "English" },
     { identifier: "hindi", name: "Hindi" },
     { identifier: "spanish", name: "Spanish" }
 ]
+
+export const OPENAI_KEY = "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"
